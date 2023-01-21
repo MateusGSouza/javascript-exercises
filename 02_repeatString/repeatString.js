@@ -1,6 +1,12 @@
-const repeatString = function() {
+const repeatString = function(string, num) {
 
+    if (num < 0) {
+        return "ERROR"
+    };
+    
+    return string.repeat(num)
 };
 
+repeatString("alo", 5)
 // Do not edit below this line
 module.exports = repeatString;
