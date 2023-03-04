@@ -25,16 +25,23 @@ const sum = function(...args) {
   return count
 };
 
-const multiply = function() {
+const multiply = function(...args) {
+  let count = 0;
 
+  args.forEach(function(item){
+    if (item.length == 0){
+      return 0;
+    } else{
+      count += item.reduce((accumulator, number) => accumulator * number);
+    }
+  });
+  return count
 };
 
 const power = function(...args) {
   const result = args.reduce((accumulator, number) => accumulator ** number);
   return result
 };
-
-power(4, 3);
 
 const factorial = function() {
 	
@@ -45,7 +52,7 @@ module.exports = {
   add,
   subtract,
   sum,
-  // multiply,
+  multiply,
   power,
   // factorial
 };
