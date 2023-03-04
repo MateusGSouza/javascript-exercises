@@ -29,9 +29,12 @@ const multiply = function() {
 
 };
 
-const power = function() {
-	
+const power = function(...args) {
+  const result = args.reduce((accumulator, number) => accumulator ** number);
+  return result
 };
+
+power(4, 3);
 
 const factorial = function() {
 	
@@ -43,6 +46,6 @@ module.exports = {
   subtract,
   sum,
   // multiply,
-  // power,
+  power,
   // factorial
 };
