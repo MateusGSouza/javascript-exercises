@@ -43,9 +43,15 @@ const power = function(...args) {
   return result
 };
 
-const factorial = function() {
-	
-};
+const factorial = function(number) {
+  let result = 1;
+  let count = 0;
+  do {
+      result = result * (count + 1);
+      count++
+    } while (count < number);
+    return result
+  };
 
 // Do not edit below this line
 module.exports = {
@@ -54,5 +60,5 @@ module.exports = {
   sum,
   multiply,
   power,
-  // factorial
+  factorial
 };
